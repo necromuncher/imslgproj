@@ -8,4 +8,3 @@
         {
             <link rel="icon" type="image/png" href="@Url.Content("~/Content/images/favicon.ico")" />   
         }
-sjknsljdl smjlsjdlsjd
