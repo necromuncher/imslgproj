@@ -1,0 +1,35 @@
+﻿body {
+}
+
+.CreateUser 
+{
+    height: 200px;
+    width: 300px;
+    background-color: Gray;
+    display:inline-block;
+    }
+
+.main-input-wrap 
+{
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.main-grid-wrap
+{
+    width: auto;
+    height: auto;
+    display: block;
+    }
+    
+.editor-field, editor-caption
+{
+    width: 40px;
+    }
+    
+.main-input-wrap #input-form
+{
+    width: 500px;
+    background-color:#DCDCDC;
+}    

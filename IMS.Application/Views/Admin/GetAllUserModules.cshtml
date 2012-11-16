@@ -1,0 +1,60 @@
+﻿@model IMS.Application.Models.UserModulePageModel
+@{
+    ViewBag.Title = "List of User Modules";
+}
+
+<h2>List of Modules</h2>
+
+<div>@Html.ActionLink("Add Module", "CreateUserModule", "Admin")</div>
+
+<table>
+    <tr>
+        <th>
+            Module
+        </th>
+        <th>
+            Add
+        </th>
+        <th>
+            Edit
+        </th>
+        <th>
+            Delete
+        </th>
+        <th>
+            Post
+        </th>
+        <th>
+            Void
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.AllUserModules) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModuleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllowToAdd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllowToEdit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllowToDelete)
+        </td>
+        <td>
+            @Html.CheckBoxFor(modelItem => item.AllowToPost)
+        </td>
+        <td>
+            @Html.CheckBoxFor(modelItem => item.AllowToVoid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditUserModule", new { id = item.PK_AppUsersModules }) |
+            @Html.ActionLink("Delete", "DeleteUserModule", new { id = item.PK_AppUsersModules })
+        </td>
+    </tr>
+}
+
+</table>

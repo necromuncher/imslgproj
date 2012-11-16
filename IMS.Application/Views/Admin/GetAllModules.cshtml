@@ -1,0 +1,63 @@
+﻿@model IMS.Application.Models.ModulePageModel
+@{
+    ViewBag.Title = "List of Modules";
+}
+
+<h2>List of Modules</h2>
+
+<div>@Html.ActionLink("Create New Module", "CreateModule", "Admin")</div>
+
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Add
+        </th>
+        <th>
+            Edit
+        </th>
+        <th>
+            Delete
+        </th>
+        <th>
+            Post
+        </th>
+        <th>
+            Void
+        </th>
+        <th>
+            Visible
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.AllModules) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WithAdd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WithEdit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WithDelete)
+        </td>
+        <td>
+            @Html.CheckBoxFor(modelItem => item.WithPost)
+        </td>
+        <td>
+            @Html.CheckBoxFor(modelItem => item.WithVoid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditModule", new { id = item.PK_MstrModules }) |
+            @Html.ActionLink("Delete", "DeleteModule", new { id = item.PK_MstrModules })
+        </td>
+    </tr>
+}
+
+</table>

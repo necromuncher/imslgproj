@@ -1,0 +1,62 @@
+Username: coldfire
+Security: Pin 611984
+email: coldfirey@gmail.com
+cell phone: 639238410142
+
+//////////////////////////
+
+PAYMENT / ORDER
+
+//////////////////////////
+
+
+Please review the order details below:
+
+24/7/365 Phone, Live Chat, Email Support FREE!
+Instant Account Activation FREE!
+Money Back Guarantee! 45 Days
+
+Hosting: Baby
+Package (12 Month Cycle): $119.40
+Coupon Credit (SPRING | 20.00 Percent OFF!): $23.88
+
+Setup Price: $0.00
+Amount Subject to Tax: $0.00
+Texas Sales Tax (%8.25): $0.00
+
+Total Due: $95.52 
+Domain (Registration via Name.com) hotclamour.com : $8.25
+
+Grand Total: $103.77
+
+//////////////////////////
+
+SERVER ACCESS
+
+//////////////////////////
+
+
+You can login to our billing system at http://gbclient.hostgator.com/login using your email address and the password 3Xgv6N2MQFvU
+
+Your Control Panel:     https://gator1287.hostgator.com:2083
+Your Domain: hotclamour.com
+Your Username: coldfire
+Your Password: ZsTBXK1zbPcC
+
+Your Nameservers:
+NS1:    ns2573.hostgator.com
+NS2:    ns2574.hostgator.com
+
+
+//////////////////////////
+
+FTP ACCESS
+
+//////////////////////////
+
+
+FTP Username: fungabble@hotclamour.com
+FTP Server: ftp.hotclamour.com
+FTP Server Port: 21
+SFTP Server Port: 22
+Password: walakalabot098765

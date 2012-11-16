@@ -1,0 +1,60 @@
+﻿@model IMS.Application.Models.UserPageModel
+@{
+    ViewBag.Title = "List of Agents";
+}
+
+<h2>List of Users</h2>
+
+<div>@Html.ActionLink("Create New User", "CreateUser", "Admin")</div>
+
+<table>
+    <tr>
+        <th>
+            Code
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Password
+        </th>
+        <th>
+            Expiry Date
+        </th>
+        <th>
+            Active
+        </th>
+        <th>
+            Admin
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.AllUsers) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpiryDate)
+        </td>
+        <td>
+            @Html.CheckBoxFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.CheckBoxFor(modelItem => item.IsAdmin)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditUser", new { id = item.PK_appUsers }) |
+            @Html.ActionLink("Delete", "DeleteUser", new { id = item.PK_appUsers })
+        </td>
+    </tr>
+}
+
+</table>
