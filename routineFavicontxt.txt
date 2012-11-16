@@ -1,0 +1,10 @@
+        var template = DwsMetaCache.CurrentDealerWebSitePublishableInfo != null ? DwsMetaCache.CurrentDealerWebSitePublishableInfo.Template: DwsMetaCache.CurrentDealerWebSite.DwsPublishableInfos.FirstOrDefault().Template; 
+        var faviconfile = @Url.Content("~/Content/templates/") + template + "/" + version + "/favicon.ico";
+        if (File.Exists(faviconfile))
+        {
+            <link rel="icon" type="image/png" href="@faviconfile"  />   
+        }
+        else
+        {
+            <link rel="icon" type="image/png" href="@Url.Content("~/Content/images/favicon.ico")" />   
+        }
