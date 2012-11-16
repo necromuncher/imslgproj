@@ -10,5 +10,6 @@ namespace IMS.Application.Models
     {
         public MstrModules CurrentModule { get; set; }
         public ICollection<MstrModules> AllModules { get; set; }
+        public String PkeyForView { get; set; }
     }
 }

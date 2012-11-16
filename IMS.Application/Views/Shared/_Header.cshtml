@@ -1,0 +1,71 @@
+﻿<div class="header">
+    <div class="logo-wrap">
+        <div class="row-fluid show-grid">
+            <div class="span4">
+                <div class="logo">
+                </div>
+                <div class="tagline">
+                    <span class="gray">Powered by</span> <span class="blue">Advance Logic Solutions</span>
+                </div>
+            </div>
+            <div class="span8">
+                <div class="head-section-right">
+                    
+
+                    @if (User.Identity.IsAuthenticated)
+                    { 
+                        <div id="logindisplay">
+                            @Html.Partial("_LogOnPartial")
+                        </div>
+                    }
+                    else { 
+                        <div class="btn-group clearfix">
+                        @*<button class="btn btn-primary" id="Register">
+                            <i class="icon-white icon-user"></i>Register</button>*@
+
+                        <button class="btn btn-primary dropdown-toggle" id="drop3">
+                            <i class="icon-white icon-lock"></i> Login <span class="caret"></span>
+                        </button>
+                        
+                            <div class="dropdown-menu pull-right login-drop" role="menu" aria-labelledby="drop3">
+                                <div class="login index">
+                                    <strong>
+                                        <button type="button" data-dismiss="dropdown-menu" aria-hidden="true" class="close">
+                                            &times;</button>
+                                        <span>Account Information</span></strong></div>
+                                        <div class="divider"></div>
+                                @Html.Partial(@Url.Content("~/Views/Account/LogOn.cshtml"))
+                            </div>
+
+                        @*<ul class="dropdown-menu pull-right login" role="menu" aria-labelledby="drop3">
+                            <li><strong>
+                                <button type="button" data-dismiss="dropdown-menu" aria-hidden="true" class="close pad-right">
+                                    &times;</button>
+                                <span class="pad-left">Account Information</span></strong></li>
+                            <li class="divider"></li>
+                            <li>Username</li>
+                            <li>
+                                <input type="text" class="input-block-level" placeholder="Email address"></li>
+                            <li>Password</li>
+                            <li>
+                                <input type="password" class="input-block-level" placeholder="Password"></li>
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="remember-me">
+                                    Remember me
+                                </label>
+                            </li>
+                            <li>
+                                <button class="btn btn-large btn-success" type="submit">
+                                    Login to ISM Login Page</button></li>
+                        </ul>*@
+                        
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+

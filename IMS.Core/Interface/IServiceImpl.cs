@@ -84,5 +84,19 @@ namespace IMS.Core.Interface
         MscIncentiveClass SaveIncentiveClass(MscIncentiveClass incentiveclass);
         void DeleteIncentiveClassByID(Int32 id);
         #endregion
+
+        #region  Raw Data Uploaded
+        ICollection<TrxRawDataFromLogistics> GetAllUploadedDataFromLogistics();
+        TrxRawDataFromLogistics GetUploadedDataFromLogisticsByID(Guid id);
+        TrxRawDataFromLogistics SaveUploadedDataFromLogistics(TrxRawDataFromLogistics rawdatatosave);
+        void DeleteUploadedDataFromLogisticsByID(Guid id);
+        #endregion
+
+        #region  Sell Out From Agency
+        ICollection<TrxSellOutFromAgency> GetAllSellOutFromAgency();
+        TrxSellOutFromAgency GetSellOutFromAgencyByID(Guid id);
+        TrxSellOutFromAgency SaveSellOutFromAgency(TrxSellOutFromAgency selloutdatatosave);
+        void DeleteSellOutFromAgencyByID(Guid id);
+        #endregion
     }
 }

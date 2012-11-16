@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "MasterFile";
+}
+
+<h2>MasterFile</h2>
+
+<div id="menucontainer">
+<ul id="menu">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Agency", "GetAllAgent", "Admin")</li>
+    <li>@Html.ActionLink("Dealers", "GetAllDealer", "Admin")</li>
+    <li>@Html.ActionLink("Branches", "GetAllBranches", "Admin")</li>
+    <li>@Html.ActionLink("Modules", "GetAllModule", "Admin")</li>
+    <li>@Html.ActionLink("Users", "GetAllUser", "Admin")</li>
+    <li>@Html.ActionLink("FPS", "GetAllFPS", "Admin")</li>
+    <li>@Html.ActionLink("Items", "GetAllItem", "Admin")</li>
+</ul>
+</div>

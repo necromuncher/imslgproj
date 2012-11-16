@@ -3,13 +3,13 @@
     ViewBag.Title = "List of Agents";
 }
 
-<link href="../../Content/css/jNotify.jquery.css" rel="stylesheet" type="text/css" />
-<script src="../../Scripts/jNotify.jquery.min.js" type="text/javascript"></script>
 <script src="../../Scripts/Request/Agency.js" type="text/javascript"></script>
 <link href="../../Content/Admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../Scripts/Helper/humane.min.js"></script>
 
 <div class = "main-input-wrap">
-    <form id="input-form" name="input-form">
+<div style=" padding: 30px 30px 0px 30px">
+    <form id="input-form" name="input-form" style=" padding: 20px">
     @Html.ValidationSummary(true, "Agent creation was unsuccessful. Please correct the errors and try again.")
     <div>
         <fieldset>
@@ -32,8 +32,12 @@
                 @Html.LabelFor(m => m.CurrentAgent.IsActive)
             </div>
             <div class="editor-field">
-                @Html.CheckBoxFor(m => m.CurrentAgent.IsActive)
+                @Html.TextBoxFor(m => m.CurrentAgent.IsActive, new { @type = "hidden" })
                 @Html.ValidationMessageFor(m => m.CurrentAgent.IsActive)
+                <SELECT name="isValidOption" id="isValidOption">
+                 <OPTION VALUE="True">True
+                 <OPTION VALUE="False" SELECTED>False
+                </SELECT>
             </div>
             <div class="editor-field" hidden="hidden">
                 @Html.TextBoxFor(m => m.PkeyForView)
@@ -47,12 +51,13 @@
         </fieldset>
     </div>
     </form>
-</div>
+    </div>
+<hr />
 
 <h2>List of Agents</h2>
-<div class="main-grid-wrap">
+<div class="main-grid-wrap" style=" padding: 20px" >
 <table id="agent-list">
-    <tr>
+    <tr style=" background-color: Gray">
         <th>
             Agent Name
         </th>
@@ -87,4 +92,5 @@
     </tr>
 }
 </table>
+</div>
 </div>

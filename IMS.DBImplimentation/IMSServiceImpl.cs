@@ -768,5 +768,158 @@ namespace IMS.DBImplimentation
         }
 
         #endregion
+
+        #region Raw Data From Logistic
+
+
+        public ICollection<TrxRawDataFromLogistics> GetAllUploadedDataFromLogistics()
+        {
+            using (IMsDBContext dbContext = new IMsDBContext())
+            {
+                return (from c in dbContext.TrxRawDataFromLogistics
+                        select c).ToList();
+            }
+        }
+
+        public TrxRawDataFromLogistics GetUploadedDataFromLogisticsByID(Guid id)
+        {
+            using (IMsDBContext dbContext = new IMsDBContext())
+            {
+                return (from c in dbContext.TrxRawDataFromLogistics
+                        where c.PK_trxRawDataFromLogistics == id
+                        select c).FirstOrDefault();
+            }
+        }
+
+        public TrxRawDataFromLogistics SaveUploadedDataFromLogistics(TrxRawDataFromLogistics rawdatatosave)
+        {
+            using (IMsDBContext dbContext = new IMsDBContext())
+            {
+                var existingRecord = (from c in dbContext.TrxRawDataFromLogistics
+                                              where c.PK_trxRawDataFromLogistics == rawdatatosave.PK_trxRawDataFromLogistics
+                                              select c).FirstOrDefault();
+
+                if (existingRecord != null)
+                {
+                    existingRecord.dealername = rawdatatosave.dealername;
+                    existingRecord.serialno = rawdatatosave.serialno;
+                    existingRecord.modelno = rawdatatosave.modelno;
+                    existingRecord.dateuploaded = DateTime.Now;
+                    dbContext.Entry(existingRecord).State = EntityState.Modified;
+                }
+                else
+                {
+                    dbContext.Entry(rawdatatosave).State = EntityState.Added;
+                }
+
+                dbContext.SaveChanges();
+                return rawdatatosave;
+            }
+        }
+
+        public void DeleteUploadedDataFromLogisticsByID(Guid id)
+        {
+            using (IMsDBContext dbContext = new IMsDBContext())
+            {
+                TrxRawDataFromLogistics existingrecord = (from c in dbContext.TrxRawDataFromLogistics
+                                                    where c.PK_trxRawDataFromLogistics == id
+                                                    select c).FirstOrDefault();
+
+                if (existingrecord != null)
+                {
+                    dbContext.Entry(existingrecord).State = EntityState.Deleted;
+                    dbContext.SaveChanges();
+                }
+            }
+        }
+
+        #endregion
+
+        #region Sell Out form Agency
+
+        public ICollection<TrxSellOutFromAgency> GetAllSellOutFromAgency()
+        {
+            using (IMsDBContext dbContext = new IMsDBContext())
+            {
+                return (from c in dbContext.TrxSellOutFromAgency
+                        select c).ToList();
+            }
+        }
+
+        public TrxSellOutFromAgency GetSellOutFromAgencyByID(Guid id)
+        {
+            using (IMsDBContext dbContext = new IMsDBContext())
+            {
+                return (from c in dbContext.TrxSellOutFromAgency
+                        where c.PK_TrxSellOutFromAgency == id
+                        select c).FirstOrDefault();
+            }
+        }
+
+        public TrxSellOutFromAgency SaveSellOutFromAgency(TrxSellOutFromAgency selloutdatatosave)
+        {
+            using (IMsDBContext dbContext = new IMsDBContext())
+            {
+                var existingRecord = (from c in dbContext.TrxSellOutFromAgency
+                                      where c.PK_TrxSellOutFromAgency == selloutdatatosave.PK_TrxSellOutFromAgency
+                                      select c).FirstOrDefault();
+
+                if (existingRecord != null)
+                {
+                    existingRecord.area = selloutdatatosave.area;
+                    existingRecord.category1 = selloutdatatosave.category1;
+                    existingRecord.dealer = selloutdatatosave.dealer;
+                    existingRecord.FK_cancelledby = selloutdatatosave.FK_cancelledby;
+                    existingRecord.FK_MstrBranches = selloutdatatosave.FK_MstrBranches;
+                    existingRecord.FK_MstrFPS = selloutdatatosave.FK_MstrFPS;
+                    existingRecord.FK_uploadedby = selloutdatatosave.FK_uploadedby;
+                    existingRecord.modelno = selloutdatatosave.modelno;
+                    existingRecord.modeofpayment = selloutdatatosave.modeofpayment;
+                    existingRecord.month = selloutdatatosave.month;
+                    existingRecord.monthday = selloutdatatosave.monthday;
+                    existingRecord.offtakeqty = selloutdatatosave.offtakeqty;
+                    existingRecord.orprice = selloutdatatosave.orprice;
+                    existingRecord.periodcoveredfrom = selloutdatatosave.periodcoveredfrom;
+                    existingRecord.periodcoveredto = selloutdatatosave.periodcoveredto;
+                    existingRecord.pesoofftake_or = selloutdatatosave.pesoofftake_or;
+                    existingRecord.pesoofftake_srp = selloutdatatosave.pesoofftake_srp;
+                    existingRecord.product2 = selloutdatatosave.product2;
+                    existingRecord.product3 = selloutdatatosave.product3;
+                    existingRecord.product4 = selloutdatatosave.product4;
+                    existingRecord.productcategory = selloutdatatosave.productcategory;
+                    existingRecord.serialno = selloutdatatosave.serialno;
+                    existingRecord.srpprice = selloutdatatosave.srpprice;
+                    existingRecord.typeofpromotion = selloutdatatosave.typeofpromotion;
+                    existingRecord.uploaddate = selloutdatatosave.uploaddate;
+                    dbContext.Entry(existingRecord).State = EntityState.Modified;
+                }
+                else
+                {
+                    dbContext.Entry(selloutdatatosave).State = EntityState.Added;
+                }
+
+                dbContext.SaveChanges();
+                return selloutdatatosave;
+            }
+        }
+
+        public void DeleteSellOutFromAgencyByID(Guid id)
+        {
+            using (IMsDBContext dbContext = new IMsDBContext())
+            {
+                TrxSellOutFromAgency existingrecord = (from c in dbContext.TrxSellOutFromAgency
+                                                          where c.PK_TrxSellOutFromAgency == id
+                                                          select c).FirstOrDefault();
+
+                if (existingrecord != null)
+                {
+                    dbContext.Entry(existingrecord).State = EntityState.Deleted;
+                    dbContext.SaveChanges();
+                }
+            }
+
+        }
+
+        #endregion
     }
 }

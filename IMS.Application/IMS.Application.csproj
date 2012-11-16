@@ -77,7 +77,11 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AgentPageModel.cs" />
+    <Compile Include="Models\BranchesPageModel.cs" />
     <Compile Include="Models\CommonPropModel.cs" />
+    <Compile Include="Models\ItemPageModel.cs" />
+    <Compile Include="Models\FPSPageModel.cs" />
+    <Compile Include="Models\DealerPageModel.cs" />
     <Compile Include="Models\ModulePageModel.cs" />
     <Compile Include="Models\PublicPageModel.cs" />
     <Compile Include="Models\UserPageModel.cs" />
@@ -103,6 +107,8 @@
     <Content Include="Content\Bootstrap\bootstrap-responsive.min.css" />
     <Content Include="Content\Bootstrap\bootstrap.min.css" />
     <Content Include="Content\Bootstrap\bootstrap.min.js" />
+    <Content Include="Content\css\bootstrap-responsive.css" />
+    <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\jNotify.jquery.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\FileUpload\canvas-to-blob.min.js" />
@@ -115,17 +121,26 @@
     <Content Include="Content\FileUpload\locale.js" />
     <Content Include="Content\FileUpload\main.js" />
     <Content Include="Content\FileUpload\tmpl.min.js" />
-    <Content Include="Content\css\bootstrap-responsive.css" />
-    <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\img\generalFile.png" />
     <Content Include="Content\img\glyphicons-halflings-white.png" />
     <Content Include="Content\img\glyphicons-halflings.png" />
+    <Content Include="Content\img\index-file.png" />
     <Content Include="Content\img\index-head-bg.png" />
     <Content Include="Content\img\index-logo.png" />
     <Content Include="Content\img\index-main-bg.png" />
+    <Content Include="Content\img\index-person.png" />
+    <Content Include="Content\img\index-section-bg.png" />
     <Content Include="Content\img\index-slide-bg.png" />
     <Content Include="Content\img\loading.gif" />
     <Content Include="Content\img\progressbar.gif" />
+    <Content Include="Content\img\register-form-excess.png" />
+    <Content Include="Content\img\register-users.png" />
+    <Content Include="Content\img\slide-bg.png" />
+    <Content Include="Content\img\slide-grid.png" />
+    <Content Include="Content\img\slide-img1.png" />
+    <Content Include="Content\img\slide-img2.png" />
+    <Content Include="Content\img\slide-img3.png" />
+    <Content Include="Content\img\slide-shadow.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -154,6 +169,28 @@
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
+    <Content Include="Models\Files\12 %282%29.JPG" />
+    <Content Include="Models\Files\12 %283%29.JPG" />
+    <Content Include="Models\Files\12.JPG" />
+    <Content Include="Models\Files\DSC06017.JPG" />
+    <Content Include="Models\Files\DSC06018.JPG" />
+    <Content Include="Models\Files\DSC06019.JPG" />
+    <Content Include="Models\Files\DSC06020.JPG" />
+    <Content Include="Models\Files\DSC06028.JPG" />
+    <Content Include="Models\Files\DSC06029.JPG" />
+    <Content Include="Models\Files\Photo0023.jpg" />
+    <Content Include="Models\Files\Photo0064.jpg" />
+    <Content Include="Models\Files\Photo0078.jpg" />
+    <Content Include="Models\Files\Photo0161.jpg" />
+    <Content Include="Models\Files\Photo0162.jpg" />
+    <Content Include="Models\Files\Photo0163.jpg" />
+    <Content Include="Models\Files\Photo0167.jpg" />
+    <Content Include="Models\Files\Photo0168.jpg" />
+    <Content Include="Models\Files\Photo0169.jpg" />
+    <Content Include="Models\Files\Photo0170.jpg" />
+    <Content Include="Models\Files\Photo0171.jpg" />
+    <Content Include="Models\Files\Photo0172.jpg" />
+    <Content Include="Models\Files\Photo0173.jpg" />
     <Content Include="Scripts\bootstrap\bootstrap-alert.js" />
     <Content Include="Scripts\bootstrap\bootstrap-button.js" />
     <Content Include="Scripts\bootstrap\bootstrap-carousel.js" />
@@ -167,7 +204,7 @@
     <Content Include="Scripts\bootstrap\bootstrap-transition.js" />
     <Content Include="Scripts\bootstrap\bootstrap-typeahead.js" />
     <Content Include="Scripts\bootstrap\jquery.js" />
-    <Content Include="Scripts\Helper\CustomDialog.js" />
+    <Content Include="Scripts\Helper\humane.min.js" />
     <Content Include="Scripts\Helper\Utilities.js" />
     <Content Include="Scripts\html5.js" />
     <Content Include="Scripts\jNotify.jquery.js" />
@@ -183,6 +220,8 @@
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Scripts\Request\Agency.js" />
+    <Content Include="Scripts\Request\Dealer.js" />
+    <Content Include="Scripts\Request\global.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -233,34 +272,45 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\CreateUser.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Admin\CreateAgent.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Admin\GetAllAgent.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\EditAgent.cshtml" />
+    <Content Include="Views\Admin\GetAllModule.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\DeleteAgent.cshtml" />
+    <Content Include="Views\Admin\GetAllUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\GetAllModules.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Admin\GetAllUsers.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Admin\GetAllUserModules.cshtml" />
+    <Content Include="Views\Admin\GetAllUserModule.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Upload\UploadHandler.ashx" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Files\" />
+    <Content Include="Views\Admin\GetAllDealer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\GetAllBranches.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\FileUpload.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\MasterFile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\GetAllFPS.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Files\BRANCH INCENTIVE REPORT 2 &amp; HOW TO COMPUTE.xls" />
+    <None Include="Models\Files\FORMAT FOR DATA FROM LOGISTICS DATA%28 DEALER SELL OUT%29.xls" />
+    <None Include="Models\Files\PROMODIZER INCENTIVE REPORT FORMAT.xls" />
+    <None Include="Models\Files\SELL OUT RAW DATA FROM AGENCY %28PROMODISER SELL OUT%29.xls" />
+    <Content Include="Views\Admin\GetAllItem.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

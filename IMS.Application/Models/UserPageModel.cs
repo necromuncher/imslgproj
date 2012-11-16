@@ -14,5 +14,6 @@ namespace IMS.Application.Models
         public AppUsers CurrentUser { get; set; }
         public string ConfirmPassword { get; set; }
         public ICollection<AppUsers> AllUsers { get; set; }
+        public String PkeyForView { get; set; }
     }
 }

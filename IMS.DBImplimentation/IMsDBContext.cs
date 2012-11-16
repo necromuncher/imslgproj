@@ -26,6 +26,8 @@ namespace IMS.DBImplimentation
             modelBuilder.Entity<MstrFPS>().Map(m => m.ToTable("MstrFPS")).HasKey(t => t.PK_MstrFPS);
             modelBuilder.Entity<MstrItems>().Map(m => m.ToTable("MstrItems")).HasKey(t => t.PK_MstrItems);
             modelBuilder.Entity<MstrModules>().Map(m => m.ToTable("MstrModules")).HasKey(t => t.PK_MstrModules);
+            modelBuilder.Entity<TrxRawDataFromLogistics>().Map(m => m.ToTable("TrxRawDataFromLogistics")).HasKey(t => t.PK_trxRawDataFromLogistics);
+            modelBuilder.Entity<TrxSellOutFromAgency>().Map(m => m.ToTable("TrxSellOutFromAgency")).HasKey(t => t.PK_TrxSellOutFromAgency);
         }
 
         public DbSet<AppUsers> AppUsers { get; set; }
@@ -39,5 +41,7 @@ namespace IMS.DBImplimentation
         public DbSet<MstrFPS> MstrFPS { get; set; }
         public DbSet<MstrItems> MstrItems { get; set; }
         public DbSet<MstrModules> MstrModules { get; set; }
+        public DbSet<TrxRawDataFromLogistics> TrxRawDataFromLogistics { get; set; }
+        public DbSet<TrxSellOutFromAgency> TrxSellOutFromAgency { get; set; }
     }
 }
